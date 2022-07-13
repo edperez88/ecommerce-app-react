@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-app-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edperez88/ecommerce-app-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edperez88/ecommerce-app-react/issues"
+  },
+  "homepage": "https://github.com/edperez88/ecommerce-app-react#readme"
+}
