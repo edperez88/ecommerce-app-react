@@ -1,7 +1,11 @@
 .Navbar
 {
+    width: 75%;
+    height: 55px;
     display: flex;
     justify-content: space-between;
     background-color: blueviolet;
     border-radius: 10px;
+    align-items: center;
+    margin: 10px;
 }
