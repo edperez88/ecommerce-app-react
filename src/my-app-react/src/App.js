@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <img src={logo} className="App-logo" alt="logo" />
         <a>
           Dario Perez comision 41080- CoderHouse
         </a>
