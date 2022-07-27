@@ -5,12 +5,12 @@ const Navbar = () => {
     return (
         <nav className='Navbar'>
             <div>
-                E-COMMERCE
+                .:Island Spa & Solarium:.
             </div>
             <div>
-                <button>Celular</button>
-                <button>Tablet</button>
-                <button>Notebook</button>
+                <button>Home</button>
+                <button>Productos y Servicios</button>
+                <button>Contacto</button>
             </div>
             <CartWidget/>
         </nav>

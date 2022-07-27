@@ -1,7 +1,7 @@
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import './Counter.css'
 
-const Contador = ({Stock, Initial, onAdd}) => {
+const Contador = ({stock, Initial, onAdd}) => {
 
     const [conteo, setConteo] = useState(Initial=0)
 
@@ -23,7 +23,7 @@ const Contador = ({Stock, Initial, onAdd}) => {
             <button onClick={add}>+</button>
             <a>{conteo}</a>
             <button onClick={dlt}>-</button>
-            <button disabled={Stock===0? true: null} onClick={ ()=> onAdd(add)}>Agregar al carrito</button>
+            <button disabled={stock===0? true: null} onClick={ ()=> onAdd(add)}>Agregar al carrito</button>
         </div>
 
     
