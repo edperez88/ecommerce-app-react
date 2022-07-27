@@ -11,7 +11,7 @@ const Item=({service})=>
                 <h5>{service.duracion}</h5>
                 <p>{service.incluye}</p>
                 <li>{service.precio}</li>
-
+                <button>{service.detalle}</button>
                 <button><Contador/></button>
                   
             </div>

@@ -1,6 +1,7 @@
 * 
 { 
     margin: 0px; padding: 10px; 
+   
     
     
 }
@@ -13,6 +14,13 @@ img
     padding: 10px;
     height: 65%;
     width: 75%;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
 }
 
 .h2
@@ -37,7 +45,7 @@ img
     
     background-color: azure;
 }
-a
+li
 {
-    text-align: center;
+    text-decoration: none;
 }

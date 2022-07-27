@@ -8,7 +8,7 @@ const Servicios = [
         incluye: 'Incluye: Bata de seda, toallas de algodon, aceites naturales, masaje piedra caliza',
         img: './images/img-masajes-3.jpg',
         id: '1',
-        cat: 'desco',
+        detalle:'+ info',
         stock:10
 
     },
@@ -19,7 +19,7 @@ const Servicios = [
         incluye: 'Incluye: Bata de seda, toallas de algodon, aceites naturales',
         img: 'images/img-facial-1.jpg',
         id: '2',
-        cat: 'facial',
+        detalle:'+ info',
         stock:10
     },
     {
@@ -29,7 +29,7 @@ const Servicios = [
         incluye: 'Incluye: Camara de sauna privada, Bata de seda, toallas de algodon, aceites naturales, cremas exfoliantes',
         img: 'images/Sola-3.jpg',
         id: '3',
-        cat: 'sauna',
+        detalle:'+ info',
         stock:10
 
 
