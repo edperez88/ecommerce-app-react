@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { getServicios } from "../../asyncMock"
-import Itemlist from "./ItemList"
+import Itemlist from "../ItemList/ItemList"
 
-const ItemListContaniner=({greeting, show, setShow})=>{
+const ItemListContaniner=({greeting})=>{
     const [Servicios, setServicios]=useState([])
     const [loading, setLoading] = useState(true)
 
@@ -16,6 +16,7 @@ const ItemListContaniner=({greeting, show, setShow})=>{
         })
 
     },[])
+
     if(loading){
         return(
             <h2>Cargando Servicios...</h2>
@@ -24,13 +25,15 @@ const ItemListContaniner=({greeting, show, setShow})=>{
 
     return(
     <>
-    <h1>{greeting}</h1>
     
-        <Itemlist Servicios={Servicios}/>
+        <h1>{greeting}</h1>
+       
+       <Itemlist Servicios={Servicios}/>
  
-    </>
     
-    )}
+    </>
+    )
+}
 
 
 export default ItemListContaniner
