@@ -45,3 +45,13 @@ export const getServicios=()=>{
         },2000)
     })
 }
+
+export const getServiciosById=(id)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(Servicios.find(service=>service.id===id))
+        },2000)
+    })
+}
+
+

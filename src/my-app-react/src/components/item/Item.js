@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import './Item.css'
+
 const Item=({service})=>
 {
     return(
@@ -9,8 +11,7 @@ const Item=({service})=>
             <h5>{service.duracion}</h5>
             <p>{service.incluye}</p>
             <p>{service.precio}</p>
-            <button>{service.detalle}</button>
-                   
+            <Link to={`detalle: ${service.id}`}>+info</Link>    
             
         </li>
     )
