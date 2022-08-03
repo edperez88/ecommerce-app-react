@@ -3,7 +3,7 @@ import './Counter.css'
 
 const Contador = ({stock, Initial, onAdd}) => {
 
-    const [conteo, setConteo] = useState(Initial=0)
+    const [conteo, setConteo] = useState(Initial=1)
 
 
     const add = () => {
@@ -19,7 +19,7 @@ const Contador = ({stock, Initial, onAdd}) => {
     
 
     return (
-        <div class="btn-father">
+        <div className="btn-father">
             <button onClick={add}>+</button>
             <a>{conteo}</a>
             <button onClick={dlt}>-</button>

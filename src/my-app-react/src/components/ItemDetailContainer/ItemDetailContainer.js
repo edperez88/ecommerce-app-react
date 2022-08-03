@@ -1,41 +1,28 @@
 import { useState, useEffect } from "react";
-import { getServiciosById } from "../../asyncMock";
 import ItemDetail from "../itemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
+import { getServiciosById } from "../../asyncMock";
 
 const ItemDetailContainer=()=>{
 
-    const[Servicio, setServicio]=useState()
-    const [loading, setLoading]= useState(true)
+    const Params = useParams()
 
-    const {ServicioId}=useParams()
-
+    const[Servicios, setServicios]=useState()
+    
     useEffect(()=>{
-        (async()=>{
-            try{
-                const response=await getServiciosById(ServicioId)
-                setServicio(response)
-            }catch(error){
-                console.log(error)
-            }finally{
-                setLoading(false)
-            }
-        })()
-
-        if(loading){
-            return(
-                <h1> Cargando Servicios...</h1>
-            )
-        }
-    })
+        getServiciosById().then(response=>{
+            setServicios(response)
+        })
+        },[])
 
 
     return(
-        <>
-         <h1> Detalles</h1>
-         <ItemDetail {...Servicio}/>
+        
+        <div className="ItemDetailContainer">
+         <ItemDetail {...setServicios}/>
+         </div>
          
-         </>
+         
     )
 }
-    export default ItemDetailContainer
+ export default ItemDetailContainer

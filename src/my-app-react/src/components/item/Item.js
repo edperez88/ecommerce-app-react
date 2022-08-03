@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom'
 import './Item.css'
 
-const Item=({service})=>
+const Item=({titulo, img, duracion, incluye, precio, id})=>
 {
     return(
         
         <li>
-            <h2>{service.titulo}</h2>
-            <img src={service.img}></img>
-            <h5>{service.duracion}</h5>
-            <p>{service.incluye}</p>
-            <p>{service.precio}</p>
-            <Link to={`detalle: ${service.id}`}>+info</Link>    
+            <h2>{titulo}</h2>
+            <img src={img}></img>
+            <h5>{duracion}</h5>
+            <p>{incluye}</p>
+            <p>{precio}</p>
+            <Link to={`/detail/${id}`}>+info</Link>    
             
         </li>
-    )
+    ) 
 }
 
 export default Item

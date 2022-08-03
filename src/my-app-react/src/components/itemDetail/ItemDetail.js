@@ -1,17 +1,44 @@
-import Contador from "../Counter/Counter"
+import Contador from "../Counter/Counter";
+import './ItemDetail.css';
 
 
-const ItemDetail = ({Servicio})=>{
+
+
+const ItemDetail = ({titulo, img, incluye, duracion, precio})=>{
+
+    {/*const handleOnAdd= (quantity)=>{
+        console.log('Agregue al Carrito', quantity)
+    */}
+
     return(
         <>
-            <h2>{Servicio.titulo}</h2>
-            <img src={Servicio.img}></img>
-            <h5>{Servicio.duracion}</h5>
-            <p>{Servicio.incluye}</p>
-            <p>{Servicio.precio}</p>
-            <Contador/>
+
+            <h2 className="titulo">
+                    titulo:{titulo}
+            </h2>
+            
+            <picture>
+                img: <img src={img} className="ItemImg"/>
+            </picture>
+            <section>
+                <p className="incluye">
+                    incluye: {incluye}
+                </p>
+                <p className="duracion">
+                    duracion:{duracion}
+                </p>
+                <p className="precio">
+                    precio: ${precio}
+                </p>
+            </section>
+            <footer className="footercard">
+                <Contador/>
+            </footer>
+
+
+
         
-        </>
+        </>  
     )
 
 

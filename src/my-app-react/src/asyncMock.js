@@ -7,7 +7,7 @@ const Servicios = [
         duracion: 'Duracion: 50 minutos',
         incluye: 'Incluye: Bata de seda, toallas de algodon, aceites naturales, masaje piedra caliza',
         img: './images/img-masajes-3.jpg',
-        id: '1',
+        id: 1,
         detalle:'+ info',
         stock:10
 
@@ -18,7 +18,7 @@ const Servicios = [
         duracion: 'Duracion: 45 minutos',
         incluye: 'Incluye: Bata de seda, toallas de algodon, aceites naturales',
         img: 'images/img-facial-1.jpg',
-        id: '2',
+        id: 2,
         detalle:'+ info',
         stock:10
     },
@@ -28,7 +28,7 @@ const Servicios = [
         duracion: 'Duracion: 1 horas',
         incluye: 'Incluye: Camara de sauna privada, Bata de seda, toallas de algodon, aceites naturales, cremas exfoliantes',
         img: 'images/Sola-3.jpg',
-        id: '3',
+        id: 3,
         detalle:'+ info',
         stock:10
 
@@ -50,7 +50,7 @@ export const getServiciosById=(id)=>{
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve(Servicios.find(service=>service.id===id))
-        },2000)
+        },1000)
     })
 }
 

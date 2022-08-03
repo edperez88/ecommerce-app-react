@@ -4,7 +4,7 @@ const Itemlist =({Servicios}) =>{
     return(
         <ul>
             {Servicios.map(service => (
-                <Item key={service.id} service={service}/>))}
+                <Item key={service.id} {...service}/>))}
         </ul>
     )}
 
