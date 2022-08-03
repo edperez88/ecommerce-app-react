@@ -5,7 +5,7 @@ import { getServiciosById } from "../../asyncMock";
 
 const ItemDetailContainer=()=>{
 
-    const {ServiceId}= useParams()
+    const {serviceId}= useParams()
 
     const[Servicios, setServicios]=useState()
     
