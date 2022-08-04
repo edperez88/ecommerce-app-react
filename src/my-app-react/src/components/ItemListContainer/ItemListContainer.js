@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react"
-import { getServicios } from "../../asyncMock"
+import { getServicios, getServiciosByCategory} from "../../asyncMock"
 import Itemlist from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
 const ItemListContaniner=({greeting})=>{
     const [Servicios, setServicios]=useState([])
     const [loading, setLoading] = useState(true)
+    const {categoryId} = useParams()
 
     useEffect(()=>{
-        getServicios().then(response =>{
+        const asyncFunction = categoryId ? getServiciosByCategory : getServicios
+
+        asyncFunction(categoryId).then(response =>{
             setServicios(response)
         }).catch(error=>{
         console.log(error)
@@ -15,7 +19,7 @@ const ItemListContaniner=({greeting})=>{
             setLoading(false)
         })
 
-    },[])
+    },[categoryId])
 
     if(loading){
         return(
@@ -25,12 +29,9 @@ const ItemListContaniner=({greeting})=>{
 
     return(
     <>
-    
-        <h1>{greeting}</h1>
+       <h1>{greeting}</h1>
        
        <Itemlist Servicios={Servicios}/>
- 
-    
     </>
     )
 }

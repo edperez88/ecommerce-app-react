@@ -1,3 +1,17 @@
 .div{
-    display: block;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+}
+.footercard
+{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ItemDetailContainer
+{
+    background-color: rgba(150, 182, 241, 0.151);
 }

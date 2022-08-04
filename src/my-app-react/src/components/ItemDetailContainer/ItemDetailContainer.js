@@ -5,21 +5,21 @@ import { getServiciosById } from "../../asyncMock";
 
 const ItemDetailContainer=()=>{
 
-    const Params = useParams()
+    const {serviceId} = useParams()
 
     const[Servicios, setServicios]=useState()
     
     useEffect(()=>{
-        getServiciosById().then(response=>{
+        getServiciosById(serviceId).then(response=>{
             setServicios(response)
         })
-        },[])
+        },[serviceId])
 
 
     return(
         
         <div className="ItemDetailContainer">
-         <ItemDetail {...setServicios}/>
+         <ItemDetail {...Servicios}/>
          </div>
          
          
