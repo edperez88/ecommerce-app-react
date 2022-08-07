@@ -5,10 +5,15 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContaniner from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-
+import CartWidget from './components/CartWidget/CartWidget';
 
 function App() {
-const []= useState(true)
+  const []= useState(true)
+  const[cart, setCart]= useState([])
+
+  const addItem = (servicioAdd)=>{
+    setCart([...cart, servicioAdd])
+  }
 
   return (
     <div className="App">
@@ -18,7 +23,8 @@ const []= useState(true)
             <Routes>
               <Route path='/' element={<ItemListContaniner greeting="Todos los Servicios"/>}/>
               <Route path='/category/:categoryId' element={<ItemListContaniner greeting="Servicios Disponibles"/>}/>
-              <Route path='/detail/:serviceId' element={<ItemDetailContainer/>}/>
+              <Route path='/detail/:serviceId' element={<ItemDetailContainer addItem={addItem}/>}/>
+              <Route path='/cart' element={<CartWidget/>}/>
             </Routes>
         
         </BrowserRouter>

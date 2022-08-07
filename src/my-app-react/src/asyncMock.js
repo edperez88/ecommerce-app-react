@@ -9,7 +9,8 @@ const Servicios = [
         img: '/images/img-masajes-3.jpg',
         id: '1',
         detalle:'+ info',
-        category:'Masajes'
+        category:'Masajes',
+        stock: 10
 
     },
     {
@@ -20,7 +21,9 @@ const Servicios = [
         img: '/images/img-facial-1.jpg',
         id: '2',
         detalle:'+ info',
-        category:'Masajes'
+        category:'Masajes',
+        stock: 10
+
     },
     {
         titulo: 'Servicio de sauna',
@@ -30,7 +33,9 @@ const Servicios = [
         img: '/images/Sola-3.jpg',
         id: '3',
         detalle:'+ info',
-        category:'Sauna'
+        category:'Sauna',
+        stock: 10
+
 
 
 

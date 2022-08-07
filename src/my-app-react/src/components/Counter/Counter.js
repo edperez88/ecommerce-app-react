@@ -3,17 +3,21 @@ import './Counter.css'
 
 const Contador = ({stock, Initial, onAdd}) => {
 
-    const [conteo, setConteo] = useState(Initial=1)
+    const [quantity, setQuantity] = useState(Initial=0)
+
+    useEffect(()=>{
+
+    }, [quantity])
 
 
     const add = () => {
-        if(conteo<10)
-        setConteo(conteo + 1)
+        if(quantity<10)
+        setQuantity(quantity + 1)
     }
 
     const dlt = () => {
-        if(conteo>1)
-        setConteo(conteo - 1)
+        if(quantity>1)
+        setQuantity(quantity - 1)
     }
 
     
@@ -21,7 +25,7 @@ const Contador = ({stock, Initial, onAdd}) => {
     return (
         <div className="btn-father">
             <button onClick={add}>+</button>
-            <a>{conteo}</a>
+            <a>{quantity}</a>
             <button onClick={dlt}>-</button>
             <button disabled={stock===0? true: null} onClick={ ()=> onAdd(add)}>Agregar al carrito</button>
         </div>

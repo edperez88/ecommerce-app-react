@@ -3,13 +3,9 @@ import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom"
 import { getServiciosById } from "../../asyncMock";
 
-const ItemDetailContainer=()=>{
+const ItemDetailContainer=(addItem)=>{
 
-<<<<<<< HEAD
     const {serviceId} = useParams()
-=======
-    const {serviceId}= useParams()
->>>>>>> 4c56b56214a496631d3bd6fd9da81358b9d0b494
 
     const[Servicios, setServicios]=useState()
     
@@ -23,7 +19,7 @@ const ItemDetailContainer=()=>{
     return(
         
         <div className="ItemDetailContainer">
-         <ItemDetail {...Servicios}/>
+         <ItemDetail {...Servicios} addItem={addItem}/>
          </div>
          
          
