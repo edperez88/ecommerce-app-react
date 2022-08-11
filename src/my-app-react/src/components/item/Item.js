@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import './Item.css'
 
-const Item=({titulo, img, duracion, incluye, precio, id})=>
-{
+const Item=({titulo, img, duracion, incluye, precio, id})=>{
+    
+
     return(
         
         <li>

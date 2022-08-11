@@ -1,17 +1,23 @@
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 
-
-const ItemDetail = ({titulo, img, incluye, duracion, precio, stock, addItem})=>{
+const ItemDetail = ({titulo, img, incluye, duracion, precio, stock})=>{
 
     const [quantity, setQuantity]= useState(0)
 
-    const handleOnAdd = (quantity)=>{
+    const {addItem} = useContext(CartContext)
+   
+
+
+    const handleOnAdd = ()=>{
         setQuantity(quantity)
-        console.log(`Se agrego: ${quantity} de ${titulo}`)
+        addItem({titulo, precio,incluye})
+        
+
     }
 
     return(
@@ -35,13 +41,13 @@ const ItemDetail = ({titulo, img, incluye, duracion, precio, stock, addItem})=>{
                 </p>
             </section>
             <footer className="footercard">
+                {quantity > 0 ?
+                <Link to='/cart' className='option'>Finalizar compra</Link>:
                 <ItemCount stock={stock} onAdd={handleOnAdd}/>
+            }
 
             </footer>
 
-
-
-        
         </>  
     )
 
