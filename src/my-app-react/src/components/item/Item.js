@@ -12,7 +12,7 @@ const Item=({titulo, img, duracion, incluye, precio, id})=>{
             <h5>{duracion}</h5>
             <p>{incluye}</p>
             <p>{precio}</p>
-            <Link to={`/detail/${id}`}>+info</Link>    
+            <Link to={`/detail/${id}`}>Detalles</Link>    
             
         </li>
     ) 

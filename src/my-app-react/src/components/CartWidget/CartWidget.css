@@ -6,3 +6,9 @@ img
     border-radius: 3px;
     
 }
+
+.CartWidget
+{
+    display: flex;
+    align-items: center;
+}

@@ -3,23 +3,31 @@ import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom"
 import { getServiciosById } from "../../asyncMock";
 
-const ItemDetailContainer=(addItem)=>{
+const ItemDetailContainer=()=>{
 
     const {serviceId} = useParams()
-
     const[Servicios, setServicios]=useState()
+    const [loading, setLoading]= useState(true)
     
     useEffect(()=>{
         getServiciosById(serviceId).then(response=>{
-            setServicios(response)
+            setServicios(response);
+        }).finally(()=>{
+            setLoading(false)
         })
         },[serviceId])
+
+        if(loading){
+            return(
+            <h2>Cargando...</h2>
+            )
+        }
 
 
     return(
         
         <div className="ItemDetailContainer">
-         <ItemDetail {...Servicios} addItem={addItem}/>
+         <ItemDetail {...Servicios}/>
          </div>
          
          
