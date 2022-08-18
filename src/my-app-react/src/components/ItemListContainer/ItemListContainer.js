@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { getServicios, getServiciosByCategory} from "../../asyncMock"
+import { getDocs, collection, query, where} from "firebase/firestore"
 import Itemlist from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import { db } from "../../service/firebase/index"
 
 const ItemListContaniner=({greeting})=>{
     const [Servicios, setServicios]=useState([])
@@ -9,15 +10,23 @@ const ItemListContaniner=({greeting})=>{
     const {categoryId} = useParams()
 
     useEffect(()=>{
-        const asyncFunction = categoryId ? getServiciosByCategory : getServicios
+        setLoading(true)
 
-        asyncFunction(categoryId).then(response =>{
-            setServicios(response)
+        const collectionRef = !categoryId ? collection(db, 'Servicios'): 
+        query(collection(db, 'Servicios'), where('category', '==', categoryId)) 
+
+        getDocs(collectionRef).then(response =>{
+        
+            const Servicios = response.docs.map(doc=>{
+                const values= doc.data()
+                return{ id: doc.id, ...values}
+            })
+            setServicios(Servicios)
         }).catch(error=>{
-        console.log(error)
-        }).finally(() =>{
+            console.log(error)
+        }).finally(()=>
             setLoading(false)
-        })
+        )
 
     },[categoryId])
 

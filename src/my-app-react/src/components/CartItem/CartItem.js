@@ -8,28 +8,27 @@ const CartItem = ({ id,titulo, quantity, precio }) => {
         deleteItem(id)
     }
 
-    return (
-        <article>
-            <header>
-                <h2>
+    return (<>
+
+                <h4>
                     {titulo}
-                </h2>
-            </header>
-            <section>
+                </h4>
+
+          
                 <p>
-                    Cantidad: {quantity}
+                cantidad: {quantity}
                 </p>
                 <p>
-                    subtotal: {precio}
+                subtotal: {precio}
                 </p>
-            </section>           
-            <footer>
+                      
+        
                  <p>
-                     Total: ${precio * quantity}
+                Total: ${precio * quantity}
                  </p>
-                 <button className='ButtonCartItem' onClick={() => handleRemove(id)}>X</button>
-            </footer>
-        </article>
+                 <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Eliminar</button>
+         
+                 </>
     )
 }
 

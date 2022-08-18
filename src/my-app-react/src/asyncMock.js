@@ -1,3 +1,4 @@
+/*
 const Servicios = [
 
 
@@ -67,4 +68,4 @@ export const getServiciosByCategory = (categoryId)=>{
     })
 }
 
-
+*/

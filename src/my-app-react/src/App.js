@@ -7,7 +7,6 @@ import  Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { createContext } from 'react';
 import { CartContextProvider } from './context/CartContext';
-import { UserContextProvider } from './context/UserContext';
 
 
 export const cartContext = createContext()
@@ -17,7 +16,6 @@ function App() {
   return (
     <div className="App">
        <header className="App-header">
-       <UserContextProvider>
         <CartContextProvider>
          <BrowserRouter>
            <Navbar/>
@@ -29,7 +27,6 @@ function App() {
             </Routes>
          </BrowserRouter>
         </CartContextProvider>
-       </UserContextProvider>
       </header>
         <p>
           Dario Perez comision 41080- CoderHouse

@@ -23,13 +23,14 @@ const Cart = () =>{
     }
     return(
         <div>
-            <h2> cart </h2>
+            <h2> Servicios Agregados </h2>
             {cart.map(serv =>(<CartItem key={serv.id}{...serv}/>))}
+            
             <h4>Total a Abonar: $ {total}</h4>
             <button onClick={() => vaciarCarro()} className="btn btn-dark">Vaciar Carrito</button>
             <button className="btn-danger">Generar Orden</button>
         </div>
-
+            
     )
 }
 
