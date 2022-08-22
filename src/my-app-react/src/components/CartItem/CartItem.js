@@ -13,16 +13,12 @@ const CartItem = ({ id,titulo, quantity, precio }) => {
                 <h4>
                     {titulo}
                 </h4>
-
-          
                 <p>
                 cantidad: {quantity}
                 </p>
                 <p>
                 subtotal: {precio}
                 </p>
-                      
-        
                  <p>
                 Total: ${precio * quantity}
                  </p>
