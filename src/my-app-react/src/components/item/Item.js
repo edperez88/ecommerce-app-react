@@ -8,7 +8,7 @@ const Item=({titulo, img, duracion, incluye, precio, id})=>{
         
         <li>
             <h2>{titulo}</h2>
-            <img src={img}></img>
+            <img src={img} alt="name"></img>
             <h5>{duracion}</h5>
             <p>{incluye}</p>
             <p>{precio}</p>

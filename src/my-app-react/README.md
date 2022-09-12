@@ -9,6 +9,8 @@ Los mismos estan en la carpeta Raiz "components", ahi podras encontrar los princ
 CartWidget: 
 Este componente contiene archivos correspondientes al elemento carrito del Navbar-
 
+Cart: Una vez seleccionados los servicios se debera completar todos los datos apara poder completar el prcesso de creacion de orden de compra
+
 Counter: 
 Elemento contador agregado para sincronizar con el carrito al agregar elementos(en desarrollo).
 
@@ -31,6 +33,8 @@ NavBar:
 Elementos que nos permiten navegacion a traves de la pagina.(Home, Masajes, Servicios de sauna).
 
 Verificando los elementos antes mensionados cada uno de ellos tiene vinculacion con el App.js que es nuestro elementos de posteo principal.
+
+
 
 //Sitio Web en Desarrolo..//
 

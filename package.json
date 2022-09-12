@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/edperez88/ecommerce-app-react/issues"
   },
-  "homepage": "https://github.com/edperez88/ecommerce-app-react#readme"
+  "homepage": "https://github.com/edperez88/ecommerce-app-react#readme",
+  "dependencies": {
+    "sweetalert2": "^11.4.32"
+  }
 }

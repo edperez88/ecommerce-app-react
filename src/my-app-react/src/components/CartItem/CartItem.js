@@ -22,7 +22,7 @@ const CartItem = ({ id,titulo, quantity, precio }) => {
                  <p>
                 Total: ${precio * quantity}
                  </p>
-                 <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Eliminar</button>
+                 <button className='btn btn-primary' onClick={() => handleRemove(id)}>Eliminar</button>
          
                  </>
     )
